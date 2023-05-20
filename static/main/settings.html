@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="title-favicon.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | OutRed</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://arc.io/widget.min.js#U4o8gDrC"></script>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MYT5J8LH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5MYT5J8LH');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4225845178810062"
+     crossorigin="anonymous"></script>
+<style>
+.titletab {
+  padding: 12px;
+  border-radius: 33px;
+  border: 2px solid grey;
+  font-size: 16px;
+  width: 20%;
+  transition: .3s;
+}
+
+.titletab[type=text] {
+  width: 20%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+    change its width to 50% */
+.titletab[type=text]:focus {
+  width: 20%;
+}
+
+.favicon {
+  padding: 12px;
+  border-radius: 33px;
+  border: 2px solid grey;
+  font-size: 16px;
+  width: 20%;
+  transition: .3s;
+}
+
+.favicon[type=text] {
+  width: 20%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+    change its width to 50% */
+.favicon[type=text]:focus {
+  width: 20%;
+}
+
+.setbutton {
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: blueviolet;
+  transition: .2s;
+  color: white;
+  border: none;
+}
+
+.setbutton:hover {
+  opacity: .3;
+  cursor: pointer;
+}
+
+.titletitle {
+  font-size: 16px;
+}
+
+.favicontitle {
+  font-size: 16px;
+}
+
+.tabcloaking {
+  text-align: left;
+}
+</style>
+</head>
+<body>
+      <div class="nav">
+        <a href="/index.html"><img class="logo" src="https://raw.githubusercontent.com/OutRed/outred.github.io/main/img/standard%20(3).gif"></a>
+        <a href="/index.html">Home</a>
+        <a href="/g/index.html">Games</a>
+        <a href="/main/apps.html">Apps</a>
+        <a href="/main/hb.html">Unblocker</a>
+        <a href="/main/hacks.html">Hacks</a>
+        <a class="active" href="/main/settings.html">Settings</a>
+    </div>
+        <br>
+        <div class="elements">
+<!-- Start code here -->
+<h1 class="title">Settings</h1>
+<div class="line"></div>
+<div class="tabcloaking">
+<h1>Set Title and Favicon</h1>
+<label class="titletitle" for="title">Title:</label><br><br>
+<input placeholder="Page Title" class="titletab" type="text" id="title" name="title">
+<br><br>
+<label class="favicontitle" for="favicon_url">Favicon URL:</label><br><br>
+<input placeholder="Tab Icon" class="favicon" type="text" id="favicon_url" name="favicon_url">
+<br><br>
+<button class="setbutton" onclick="setTitleAndFavicon()">Set Title and Favicon</button>
+</div>
+<script>
+  function setTitleAndFavicon() {
+    // Get the user's input for the title and favicon URL
+    var title = document.getElementById("title").value;
+    var faviconUrl = document.getElementById("favicon_url").value;
+    
+    // Set the title and favicon
+    document.title = title;
+    document.getElementById("favicon").href = faviconUrl;
+  }
+</script>
+<br>
+<!-- End code here -->
+</div>
+          <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1012472708010889217', // OutRed Hub
+        channel: '1056002719757914212' // #❌│website-chat
+    })
+</script>
+</body>
+</html>

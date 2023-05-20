@@ -1,0 +1,194 @@
+body {
+        color: black;
+        text-align: center;
+        font-family: arial;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e,     #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+/* Red Button */
+ #clear {
+        background-color: #D10000;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #FF2E2E;
+        border: none;
+        outline: none;
+      }
+      
+      #clear:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+      /* Green button */
+      #create {
+        background-color: #00A300;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #00D100;
+        border: none;
+        outline: none;
+      }
+      
+      #create:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+
+/* Grey button */
+      #grey {
+        background-color: #808080;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #979797;
+        border: none;
+        outline: none;
+      }
+      
+      #grey:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+/* Magenta button */
+      #magenta {
+        background-color: #880ED4;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #A020F0;
+        border: none;
+        outline: none;
+      }
+      
+      #magenta:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+/* Dark button */
+      #dark {
+        background-color: #2E2E2E;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #454545;
+        border: none;
+        outline: none;
+      }
+      
+      #dark:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+/* Light button */
+      #light {
+        background-color: #D1D1D1;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: black;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #E8E8E8;
+        border: none;
+        outline: none;
+      }
+      
+      #light:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+/* Blue button */
+      #blue {
+        background-color: #0047AB;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #6495ED;
+        border: none;
+        outline: none;
+      }
+      
+      #blue:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+
+/* Gradient button */
+      #gradient {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e,     #23a6d5, #23d5ab);
+        padding: 10px 20px;
+        font-size: 16px;
+        color: black;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #23d5ab;
+        border: none;
+        outline: none;
+      }
+      
+      #gradient:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #30D5C8; 
+  border-radius: 33px;
+}
+
+input {
+   padding: 10px;
+   font-size: 18px;      
+        border-radius: 33px;
+        border: 1px solid grey;
+      }

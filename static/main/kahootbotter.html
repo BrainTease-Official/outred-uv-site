@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4225845178810062"
+     crossorigin="anonymous"></script>
+    <title>Kahoot Bot Joiner</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="kahoot-link">Kahoot Join Link:</label>
+      <input type="text" id="kahoot-link" />
+
+      <label for="number-of-players">Number of Players:</label>
+      <input type="number" id="number-of-players" />
+
+      <button id="join-button">Join Kahoot</button>
+    </form>
+
+    <script>
+      const joinButton = document.getElementById("join-button");
+      joinButton.addEventListener("click", function () {
+        // Extract information from the form
+        const kahootLink = document.getElementById("kahoot-link").value;
+        const numberOfPlayers = document.getElementById("number-of-players").value;
+
+        // Join the Kahoot game
+        for (let i = 0; i < numberOfPlayers; i++) {
+          const username = "Player " + (i + 1);
+          kahoot.join(kahootLink, username);
+        }
+      });
+    </script>
+  </body>
+</html>

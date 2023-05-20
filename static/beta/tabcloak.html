@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title id="page-title">Default Title</title>
+	<link id="favicon" rel="icon" type="image/png" href="default-favicon.png">
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(40, 40, 40);
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        .tabcloaking {
+            margin: 5px;
+        }
+
+        input {
+            margin: 5px;
+            border-radius: 50px;
+            padding: 8px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabcloaking">
+    <h1>Tab Cloaking</h1>
+	<input placeholder="Title" type="text" id="title-input" oninput="setTitle()">
+	<input placeholder="Favicon URL" type="text" id="favicon-input" oninput="setFavicon()">
+	<button onclick="reset()">Reset</button>
+    <br><br>
+    <a href="/index.html">To home</a>
+    </div>
+	<script>
+		function setTitle() {
+			var title = document.getElementById("title-input").value;
+			document.getElementById("page-title").innerText = title;
+		}
+
+		function setFavicon() {
+			var faviconUrl = document.getElementById("favicon-input").value;
+			document.getElementById("favicon").href = faviconUrl;
+		}
+
+		function reset() {
+			document.getElementById("title-input").value = "";
+			document.getElementById("page-title").innerText = "Default Title";
+			document.getElementById("favicon-input").value = "";
+			document.getElementById("favicon").href = "default-favicon.png";
+		}
+	</script>
+</body>
+</html>

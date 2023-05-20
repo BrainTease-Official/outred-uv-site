@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+  <TITLE>about:blank Embedder | OutRed</TITLE>
+  <LINK REL="stylesheet" HREF="/css/style.css">
+  <SCRIPT SRC="https://arc.io/widget.min.js#U4o8gDrC"></SCRIPT>
+   <!-- Google tag (gtag.js) -->
+<SCRIPT SRC="https://www.googletagmanager.com/gtag/js?id=G-B5MYT5J8LH"></SCRIPT>
+<SCRIPT>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5MYT5J8LH');
+</SCRIPT>
+</HEAD>
+<BODY>
+         <style>
+      input {
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 33px;
+        border: 1px solid grey;
+      }
+      
+      button {
+        border: none;
+        outline: none;
+        background-color: #1e1e1e;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #343434;
+      }
+      
+      button:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+      
+      button:hover {
+        cursor: pointer;
+      }
+      
+      #clear {
+        background-color: #D10000;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #FF2E2E;
+        border: none;
+        outline: none;
+      }
+      
+      #clear:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+      
+      #create {
+        background-color: #00A300;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        transition: all ease 0.1s;
+        box-shadow: 0px 5px 0px 0px #00D100;
+        border: none;
+        outline: none;
+      }
+      
+      #create:active {
+          transform: translateY(5px);
+          box-shadow: 0px 0px 0px 0px #a29bfe;
+      }
+    </style>
+  <DIV CLASS="nav">
+        <A HREF="/index.html"><IMG CLASS="logo" SRC="https://raw.githubusercontent.com/OutRed/outred.github.io/main/img/standard%20(3).gif"></A>
+        <A HREF="/index.html">Home</A>
+        <A HREF="/g/index.html">Games</A>
+        <A HREF="/main/apps.html">Apps</A>
+        <A HREF="/main/hb.html">Unblocker</A>
+        <A HREF="/main/hacks.html">Hacks</A>
+        <A HREF="/main/settings.html">Settings</A>
+        
+    </DIV>
+        <BR>
+         <div class="console-container">
+      <div class="console">
+        <h1 class="title">about:blank Embedder</h1>
+        <button class="popup"
+        onclick="alert('Hello there!\n\ \n\You simply enter in a URL, press Create Page, and the website is created in a new tab with the URL about:blank so teachers cannot see what you are doing. Note: This DOES NOT unblock websites, it only embeds them into pages with the URL about:blank. It also may not work on websites that do not allow embedding.');"
+      >
+        What is this?
+      </button>
+        <div class="consolebody">
+          <h2>Enter URL Below</h2>
+          <p class="console-input"><input placeholder="https://website.com" id="url-target" value="" autocomplete="on" type="text" autofocus /></p>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button id="create" class="console-button">Create Page</button>
+        <button id="clear" class="console-button" onclick="document.getElementById('url-target').value = ''">Clear Input</button>
+      </div>
+    </div>
+    <script>
+      var url = document.getElementById("url-target");
+      var urlObj = new window.URL(window.location.href);
+      document.getElementById("create").onclick = function () {
+        if (url.value.substring(0, 8) !== "https://" && url.value.substring(0, 7) !== "http://") {
+          url.value = "https://" + url.value.split("https://").pop();
+        } else if (url.value.substring(0, 7) == "http://") {
+          url.value = "https://" + url.value.split("http://").pop();
+        }
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = url.value;
+        win.document.body.appendChild(iframe);
+      };
+    </script>
+</DIV>
+          <SCRIPT SRC='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'></SCRIPT>
+    <SCRIPT>
+    new Crate({
+        server: '1012472708010889217', // OutRed Hub
+        channel: '1056002719757914212' // #❌│website-chat
+    })
+</SCRIPT>
+</BODY>
+</HTML>

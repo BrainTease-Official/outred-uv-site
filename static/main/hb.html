@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HB | OutRed</title>
+    <script>
+window.location = "https://www.outred.org/main/apps";
+    </script>
+    <style>
+       html {
+  scroll-behavior: smooth;
+}
+      
+        body {
+    color: white;
+    background-color: #292929;
+    text-align: center;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #202124; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #880ED4; 
+  border-radius: 50px;
+}
+*/
+
+.hyperlink {
+    text-decoration: none;
+    color: #0076ff;
+    scroll-behavior: smooth;;
+}
+
+.hyperlink:hover {
+  text-decoration: underline;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.game-link {
+    height: 330px;
+    width: 250px;
+}
+
+.game-tile {
+    background-color: white;
+    height: 300px;
+    width: 220px;
+    color: white;
+    transition: 0.2s;
+    border-radius: 50px;
+    color: black;
+    padding: 3%;
+}
+
+.game-tile:hover {
+    text-decoration: none;
+    transform: scale(0.93);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 19px #000000;
+    -moz-box-shadow: 0px 0px 19px #000000;
+    box-shadow: 0px 0px 19px #000000;
+}
+
+.game-tile:active {
+  transform: scale(0.98);
+}
+
+.game-icon {
+    max-width: 90%;
+    margin: 5 10% auto;
+    border-radius: 50px;
+    place-items: center center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    height: auto;
+    text-align: center;
+}
+
+.tile-title {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    repeat:(auto-fill, minmax(200px, 1fr))
+}
+
+.container {
+    padding: 1px;
+}
+      .nav {
+        background-color: #171717;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        padding: 18px;
+        font-size: 18px;
+        text-align: right;
+      }
+      
+      .nav a {
+        margin: 15px;
+        color: white;
+        transition: 0.2s;
+        padding-right: 13px
+      }
+      
+      .nav a:hover {
+        cursor: pointer;
+        color: grey;
+      }
+      
+      .active {
+        background-color: #6C0BA9;
+        border-radius: 27px;
+        padding: 17px;
+      }
+      
+      .content {
+        margin-top: 65px; /* adjust the value as needed */
+}
+      
+      #phrase {
+        margin: 60px;
+        font-size: 24px;
+      }
+
+      .mid {
+        margin-top: 60%;
+      }
+
+      /* Play button */
+      .play {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+  margin-top: 20px;
+}
+
+.play {
+  background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+  transition: all 0.2s ease;
+  scroll-behavior: smooth;
+}
+
+.play:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+  transform:scale(1.1);
+  cursor: pointer;
+}
+
+.logo {
+  height: 45px;
+  border-radius: 33px;
+  position: absolute;
+  left: 7px;
+  user-select: none;
+  top: -19px;
+  user-select: none;
+  animation: rainbow-colors 2s linear infinite;
+  animation-delay: calc(-2s * var(--char-percent));
+}
+/* Unfortunately, browsers try to take the shortest distance between transition/animation properties, so a simple `0turn` to `1turn` doesn't get the proper effect. */
+@keyframes rainbow-colors {
+  0% { color: hsl(0turn, 90%, 65%); }
+  25% { color: hsl(.25turn, 90%, 65%); }
+  50% { color: hsl(.5turn, 90%, 65%); }
+  75% { color: hsl(.75turn, 90%, 65%); }
+  100% { color: hsl(1turn, 90%, 65%); }
+}
+
+.logo:hover {
+  cursor: pointer;
+   
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  margin-top: 90px;
+}
+
+.front {
+  margin-top: 100px;
+}
+
+/* Apps button */
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition-property: box-shadow;
+  transition: 0.2s;
+  margin: 25px;
+}
+
+.shadow__btn {
+  background: #03A89E;
+  box-shadow: 0 0 25px #03A89E;
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px #03A89E,
+              0 0 25px #03A89E,
+              0 0 50px #03A89E,
+              0 0 100px #03A89E;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+footer { 
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  color: white;
+}
+            </style>
+</head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MYT5J8LH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-B5MYT5J8LH');
+      </script>
+<body>
+   <div class="nav">
+    <a href="https://outred.github.io/"><h1 class="logo">OutRed Games</h1></a>
+    <i class="fa fa-bell" style="font-size:22px;color:white"></i>
+<a class="active" href="https://outred.github.io">Home</a>
+<a href="#games">Games</a>
+<a href="#apps">Apps</a>   
+<a href="hb">Unblocker</a>
+<a href="settings">Settings</a>
+  </div>
+      <div class="content">
+    <div class="front">
+    <h1 class="title">Holy Ünblocker</h1>
+    <h2>(It looks weird to bypass keywords)</h2>
+    </div>
+    <iframe src="https://mathpractice.joemomma1234.repl.co" height="900px" width="90%"></iframe>
+    </div>
+    <div class="line">
+        <footer><h2>© OutRed 2023</h2></footer>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+      new Crate({
+          server: '1012472708010889217', // OutRed Support
+          channel: '1056002719757914212' // #❌│website-chat
+      })
+  </script>
+</body>
+</html>

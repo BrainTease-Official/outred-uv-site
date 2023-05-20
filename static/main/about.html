@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | OutRed</title>
+    <style>
+        html {
+          scroll-behavior: smooth;
+        }
+              
+                body {
+            color: white;;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #202124;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            scroll-behavior: smooth;
+        }
+        
+        /* custom scrollbar */
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #202124; 
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #880ED4; 
+          border-radius: 50px;
+        }
+        
+        .hyperlink {
+            text-decoration: none;
+            color: #0076ff;
+            scroll-behavior: smooth;;
+        }
+        
+        .hyperlink:hover {
+          text-decoration: underline;
+        }
+        
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        
+        .game-link {
+            height: 330px;
+            width: 250px;
+        }
+        
+        .game-tile {
+            background-color: white;
+            height: 300px;
+            width: 220px;
+            color: white;
+            transition: 0.2s;
+            border-radius: 50px;
+            color: black;
+            padding: 3%;
+        }
+        
+        .game-tile:hover {
+            text-decoration: none;
+            transform: scale(0.93);
+            cursor: pointer;
+            -webkit-box-shadow: 0px 0px 19px #000000;
+            -moz-box-shadow: 0px 0px 19px #000000;
+            box-shadow: 0px 0px 19px #000000;
+        }
+        
+        .game-tile:active {
+          transform: scale(0.98);
+        }
+        
+        .game-icon {
+            max-width: 90%;
+            margin: 5 10% auto;
+            border-radius: 50px;
+            place-items: center center;
+            justify-content: center;
+            align-items: center;
+            display: block;
+            height: auto;
+            text-align: center;
+        }
+        
+        .game-title {
+            text-align: center;
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            order: 0;
+            flex-grow: 0;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            repeat:(auto-fill, minmax(200px, 1fr))
+        }
+        
+        .container {
+            padding: 1px;
+        }
+              .nav {
+                background-color: #171717;
+                color: white;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%; 
+                padding: 15px;
+                font-size: 16px;
+              }
+              
+              .nav a {
+                margin: 14px;
+                color: white;
+                transition: 0.2s;
+              }
+              
+              .nav a:hover {
+                cursor: pointer;
+                color: grey;
+              }
+              
+              .active {
+                background-color: #6C0BA9;
+                border-radius: 33px;
+                padding: 14px;
+              }
+              
+              .content {
+                margin-top: 65px; /* adjust the value as needed */
+        }
+              
+              #phrase {
+                margin: 60px;
+                font-size: 24px;
+              }
+        
+              .mid {
+                margin-top: 60%;
+              }
+        
+              /* Play button */
+              .play {
+          padding: 10px 20px;
+          border: none;
+          font-size: 17px;
+          color: #fff;
+          border-radius: 7px;
+          letter-spacing: 3px;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: 0.5s;
+          transition-property: box-shadow;
+          margin-top: 20px;
+        }
+        
+        .play {
+          background: rgb(0,140,255);
+          box-shadow: 0 0 25px rgb(0,140,255);
+          transition: all 0.2s ease;
+          scroll-behavior: smooth;
+        }
+        
+        .play:hover {
+          box-shadow: 0 0 5px rgb(0,140,255),
+                      0 0 25px rgb(0,140,255),
+                      0 0 50px rgb(0,140,255),
+                      0 0 100px rgb(0,140,255);
+          transform:scale(1.1);
+          cursor: pointer;
+        }
+        
+        .logo {
+          height: 45px;
+          border-radius: 15px;
+          position: absolute;
+          left: 6px;
+          user-select: none;
+          top: 3px;
+          user-select: none;
+        }
+        
+        .logo:hover {
+          cursor: pointer;
+           
+        }
+        
+        .line {
+          height: 1px;
+          width: 100%;
+          background-color: white;
+          margin-top: 90px;
+        }
+        
+        .front {
+          margin-top: 100px;
+        }
+        
+        /* Apps button */
+        .shadow__btn {
+          padding: 10px 20px;
+          border: none;
+          font-size: 17px;
+          color: #fff;
+          border-radius: 7px;
+          letter-spacing: 3px;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition-property: box-shadow;
+          transition: 0.2s;
+          margin: 25px;
+        }
+        
+        .shadow__btn {
+          background: #03A89E;
+          box-shadow: 0 0 25px #03A89E;
+        }
+        
+        .shadow__btn:hover {
+          box-shadow: 0 0 5px #03A89E,
+                      0 0 25px #03A89E,
+                      0 0 50px #03A89E,
+                      0 0 100px #03A89E;
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+        
+        footer { 
+          padding: 5px;
+        }
+        
+        a {
+          text-decoration: none;
+        }
+        
+        a:hover {
+          text-decoration: none;
+        }
+            </style>
+</head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5MYT5J8LH"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-B5MYT5J8LH');
+      </script>
+<body>
+    <div class="nav">
+        <a href="https://outred.github.io/"><img class="logo" src="https://raw.githubusercontent.com/OutRed/outred.github.io/main/img/standard%20(3).gif"></a>
+    <a href="#">Home</a>
+    <a href="https://outred.github.io/#games">Games</a>
+    <a href="https://outred.github.io/#apps">Apps</a>   
+    <a href="/main/hb">Unblocker</a>
+    <a href="/main/settings">Settings</a>
+    <a href="/main/tos">TOS</a>
+    <a href="/main/contribution">Contribute</a>
+    <a class="active" href="/main/about">About</a>
+      </div>
+    <div class="content">
+<h1 class="title">About</h1>
+<h2>I (OutRed) made this website originally back in school for some friends, back when I had no idea how to code. My friends kept on bugging me, so I finally made it. I password protected the website at first so only my friends could access it, and no annoying people. Whenever it got blocked, I would change the URL so my friends could use it again. Eventually, I got ratted out, and had to pay the consequences. The site got blocked, and I didn't want to mess with the firewall, so I took down the password and made the site public. <br><br>Ever since then, I have been updating this site as much as possible, with <a class="hyperlink" href="https://outred.github.io/#apps">Apps</a>, <a class="hyperlink" href="https://outred.github.io/#apps">Unblockers</a>, and <a class="hyperlink" href="https://outred.github.io/#games">Games</a>, trying to make it the best out there. I love working on this, and if you ever need any help or questions, or want to chat in my community, go ahead and join the <a class="hyperlink" href="https://discord.gg/9qYmpWS8ve">Discord server</a>.</h2>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+      new Crate({
+          server: '1012472708010889217', // OutRed Support
+          channel: '1056002719757914212' // #❌│website-chat
+      })
+  </script>
+</body>
+</html>
